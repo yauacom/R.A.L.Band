@@ -1,4 +1,7 @@
 const initialPrice = window.location.hash.substring(1);
+// const initialPrice = window.location.href.split("#").pop();
+console.log(initialPrice);
+
 const subtotalElement = document.getElementById("subtotal");
 const taxElement = document.getElementById("tax");
 const totalElement = document.getElementById("total");
@@ -13,3 +16,9 @@ const calculateTotal = () => {
   subtotalElement.innerText = initialPrice;
   totalElement.innerText = `$${total}`;
 };
+
+if (document.readyState == "loading") {
+  document.addEventListener("DOMContentLoaded", calculateTotal);
+} else {
+  calculateTotal();
+}
