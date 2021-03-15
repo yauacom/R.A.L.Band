@@ -1,0 +1,350 @@
+@media (max-width: 1024px) {
+  section,
+  header {
+    padding: 40px;
+  }
+
+  section h2 {
+    font-size: 2em;
+  }
+
+  header .logo-animate .logo {
+    font-size: 7vw;
+  }
+
+  header.sticky .logo {
+    left: 40px;
+    font-size: 2em;
+  }
+
+  header.sticky .logo-animate::before {
+    left: 40px;
+  }
+
+  header.sticky .banner {
+    opacity: 0;
+  }
+
+  header .menu-btn {
+    opacity: 0;
+  }
+  header.sticky .menu-btn {
+    opacity: 1;
+    transition: opacity 3s;
+  }
+
+  nav ul {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  nav.active ul {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 30px;
+  }
+
+  nav ul li a {
+    font-size: 1.5em;
+    padding: 5px 20px;
+  }
+  /* Begin: Menu-btn */
+  .menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu-btn__burger {
+    width: 50px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 047, 0.2);
+    transition: all 0.5s ease-in-out;
+    margin-left: 15px;
+  }
+
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 047, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu-btn__burger::before {
+    transform: translateY(-16px);
+  }
+
+  .menu-btn__burger::after {
+    transform: translateY(16px);
+  }
+
+  /* Menu Button Burger Animation */
+
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+  /* End : Menu Button */
+}
+
+@media (max-width: 800px) {
+  .s-full-width,
+  .s-col-full {
+    width: 100% !important;
+  }
+
+  header.sticky .logo {
+    color: #7145c7;
+  }
+
+  header.sticky .logo-animate::before {
+    opacity: 0;
+  }
+
+  nav ul:hover li a {
+    transform: scale(1.2);
+    /* opacity: 0.2; */
+    /* filter: blur(5px); */
+  }
+
+  /* Star-info*/
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: none;
+  }
+
+  .container {
+    position: relative;
+    /* width: 1100px; */
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+  }
+
+  .container .card {
+    position: relative;
+    /* max-width: 300px;  */
+    max-width: 320px;
+    /* width: 400px; */
+    /* height: 215px; */
+    height: 280px;
+    background: #fff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+    margin-top: 96px;
+  }
+
+  .container .card:hover {
+    /* height: 480px; */
+    height: 480px;
+  }
+
+  .container .card .imgBx {
+    position: relative;
+    /* width: 260px;
+  height: 260px; */
+    width: 270px;
+    height: 270px;
+    top: -70px;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .container .card .imgBx img {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+
+  .container .card .content {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 10px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  .container .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+  }
+
+  #content .member-img {
+    border-radius: 4px;
+    width: 60%;
+    height: auto;
+  }
+
+  .content-section {
+    overflow: hidden;
+  }
+
+  #cart-section .cart-row {
+    width: 100%;
+  }
+
+  #cart-section .cart-quantity-input {
+    width: 42px;
+    margin-right: 10px;
+  }
+
+  #cart-section .fa-times {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin-left: 15px;
+  }
+
+  #cart-section .remove-btn {
+    display: none;
+  }
+
+  .contact-form {
+    padding-right: 16px;
+  }
+
+  .social-list ul li a {
+    transition-delay: 0s, 0.5s, 0.5s;
+    top: -50px;
+    transform: translateY(50px);
+    z-index: 11;
+  }
+
+  #footer {
+    overflow: hidden;
+  }
+}
+
+/* iPhone 5/SE */
+
+@media (max-width: 360px) {
+  #cart-section .cart-col {
+    margin-right: 14px;
+  }
+
+  #cart-section .cart-col:last-child {
+    margin-right: 0;
+  }
+
+  #cart-section .cart-header {
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  #cart-section .cart-item-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  #cart-section .cart-item-title {
+    display: none;
+  }
+
+  #cart-section .cart-item {
+    min-width: 75px;
+  }
+
+  #cart-section .cart-price {
+    width: 20%;
+    color: #bdb9b8;
+    font-size: 15px;
+    min-width: 47px;
+  }
+
+  #cart-section .cart-item-title {
+    margin-left: 8px;
+    color: #bdb9b8;
+    font-size: 15px;
+  }
+
+  .menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu-btn__burger {
+    width: 25px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 047, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 047, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+
+  header.sticky .logo {
+    font-size: 1.5em;
+    color: #7145c7;
+  }
+
+  header.sticky .logo-animate::before {
+    opacity: 0;
+  }
+  #footer {
+    overflow: hidden;
+  }
+}

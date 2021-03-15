@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R.A.L. BAND | Purchase Page</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" />
+  <script src="https://kit.fontawesome.com/e8380b90fa.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./purchase.css">
+</head>
+
+<body>
+  <section id="purchase-section">
+    <div id="purchase-container">
+      <div id="purchase-order-review">
+        <div>
+          <h2>Order Summary</h2>
+          <ul id="order-summary">
+            <li><span>Subtotal:</span><span id="subtotal">$19.99</span></li>
+            <li><span>Tax:</span><span id="tax">$2.00</span></li>
+            <li><span>Total:</span><span id="total">$21.99</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Thank you for your support!<br><br><br></h3>
+        </div>
+        <ul id="social-icons">
+          <li><a href="https://www.facebook.com/sang.vo.589/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/sang-vo-9194241b2/" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="https://www.youtube.com/user/Yauacom" target="_blank"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </div>
+      <div id="purchase-contact-form">
+        <h2>Shipping address</h2>
+        <form id="form-box" method="POST">
+          <div class="input-box w50">
+            <input id="first-name" name="firstName" type="text" required="required">
+            <label for="first-name">First Name</label>
+            <span class="form-message"></span>
+          </div>
+          <div class="input-box w50">
+            <input id="last-name" name="lastName" type="text" required="required">
+            <label for="last-name">Last Name</label>
+            <span class="form-message"></span>
+          </div>
+          <div class="input-box w50">
+            <input id="email" name="email" type="text" required="required">
+            <label for="email">Email Address</label>
+            <span class="form-message"></span>
+          </div>
+          <div class="input-box w50">
+            <input id="phone" name="phone" type="text" required="required">
+            <label for="phone">Phone Number</label>
+            <span class="form-message"></span>
+          </div>
+          <div class="input-box w50">
+            <input id="address" name="address" type="text" required="required">
+            <label for="address">Address</label>
+            <span class="form-message"></span>
+          </div>
+          <div class="input-box w50">
+            <input id="city" name="city" type="text" required="required">
+            <label for="city">City</label>
+            <span class="form-message"></span>
+          </div>
+          <div class="input-box w50">
+            <input id="state" name="state" type="text" required="required">
+            <label for="state">State</label>
+            <span class="form-message"></span>
+          </div>
+          <div class="input-box w50">
+            <input id="zipcode" name="zipcode" type="text" required="required">
+            <label for="zipcode">ZIP Code</label>
+            <span class="form-message"></span>
+          </div>
+          <!-- <div class="input-box w100">
+            <textarea id="address" name="address" required
+              placeholder="&#13;Street Address, City, State ZIP Code"></textarea>
+            <label for="address">Address</label>
+            <span class="form-message"></span>
+          </div> -->
+          <div class="input-box w100">
+            <button class="form-submit">Place your order</button>
+            <!-- <input type="submit" value="Place your order"> -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="./purchase.js"></script>
+  <script src="./validator.js"></script>
+  <script>
+    document.addEventListener('invalid', (() => {
+      Validator({
+        form: "#form-box",
+        formGroupSelector: ".input-box.w50",
+        errorSelector: ".form-message",
+        rules: [
+          Validator.isRequired("#first-name", "Please enter your first name."),
+          Validator.isRequired("#last-name", "Please enter your last name."),
+          Validator.isEmail("#email"),
+          Validator.isPhone("#phone"),
+          Validator.isAddress("#address"),
+          Validator.isCity("#city"),
+          Validator.isState("#state"),
+          Validator.isZipCode("#zipcode"),
+          // Check for matching password
+          // Validator.isConfirmed("#password", () => {
+          //   return document.querySelector("#form-box #password").value;
+          // }, "Your password does not match.")
+
+          // if radio type input or something is similar 
+        ],
+        onSubmit: (data) => {
+          // Call API
+          console.log(data);
+        }
+      });
+
+      return event => {
+        event.preventDefault();
+        document.getElementById("last-name").focus();
+        document.getElementById("email").focus();
+        document.getElementById("phone").focus();
+        document.getElementById("address").focus();
+        document.getElementById("city").focus();
+        document.getElementById("state").focus();
+        document.getElementById("zipcode").focus();
+        document.getElementById("first-name").focus();
+      };
+    })(), true);
+  </script>
+
+</body>
+
+</html>

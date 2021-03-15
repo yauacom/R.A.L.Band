@@ -1,0 +1,346 @@
+/* Font Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
+
+/* Reset CSS */
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#purchase-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #9b64fd;
+}
+
+#purchase-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #edf255;
+}
+
+#purchase-container {
+  position: relative;
+  min-height: 620px;
+  min-width: 1100px;
+  /* background-color: #fff; */
+  display: flex;
+  z-index: 5;
+}
+
+#purchase-order-review {
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  background-color: #9b64fd;
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+#purchase-order-review h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#purchase-order-review h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#order-summary {
+  position: relative;
+  margin: 50px 0;
+  list-style: none;
+}
+
+#order-summary li {
+  position: relative;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 75px);
+}
+
+#order-summary li:last-child {
+  border-top: 1px solid #fff;
+  padding-top: 10px;
+}
+
+#order-summary li span {
+  color: #fff;
+  font-weight: 300;
+}
+
+#order-summary li span:nth-child(2) {
+  text-align: right;
+}
+
+#social-icons {
+  position: relative;
+  display: flex;
+  list-style: none;
+  text-align: left;
+}
+
+#social-icons li {
+  margin-right: 20px;
+  font-size: 2em;
+}
+
+#social-icons li a {
+  color: #fff;
+  padding: 20px 40px 20px 0;
+}
+
+#social-icons li a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#purchase-contact-form {
+  position: absolute;
+  padding: 70px 50px;
+  padding-left: 250px;
+  margin-left: 150px;
+  width: calc(100% - 150px);
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.15);
+}
+
+#purchase-contact-form h2 {
+  color: #9b64fd;
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+#form-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+#form-box .input-box {
+  position: relative;
+  margin-bottom: 57px;
+}
+
+#form-box .input-box.w50 {
+  width: 47%;
+}
+
+#form-box .input-box.w100 {
+  width: 100%;
+}
+#form-box .input-box button,
+#form-box .input-box input {
+  width: 100%;
+  resize: none;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #777;
+}
+
+#form-box .input-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  font-size: 18px;
+  font-weight: 300;
+  transition: 0.3s;
+}
+
+#form-box .input-box .form-message {
+  top: 35px;
+  font-size: 13px;
+}
+
+#form-box .input-box input:focus,
+#form-box .input-box input:valid {
+  border-bottom: 1px solid #55d937;
+}
+
+#form-box .input-box input:focus ~ label,
+#form-box .input-box input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #9b64fd;
+}
+
+#form-box .input-box button {
+  position: relative;
+  cursor: pointer;
+  background-color: #9b64fd;
+  color: #fff;
+  border: none;
+  max-width: 250px;
+  padding: 12px;
+}
+
+#form-box .input-box.w100 .form-message {
+  top: 95px;
+}
+
+#form-box .input-box button:hover {
+  background-color: rgba(156, 99, 253, 0.6);
+}
+
+#form-box .input-box.invalid {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+#form-box .input-box.invalid input {
+  border-bottom: 1px solid #d93755;
+}
+
+#form-box .input-box.invalid .form-message {
+  color: #d93755;
+}
+
+@media (max-width: 1200px) {
+  #purchase-container {
+    width: 90%;
+    min-width: auto;
+    margin: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  }
+
+  #purchase-order-review {
+    top: 0;
+    height: 620px;
+    position: relative;
+    box-shadow: none;
+  }
+
+  #purchase-contact-form {
+    position: relative;
+    width: calc(100% - 350px);
+    padding-left: 0;
+    margin-left: 0;
+    padding: 40px;
+    height: 620px;
+    box-shadow: none;
+  }
+
+  #purchase-contact-form h2 {
+    margin-top: 0;
+  }
+
+  #form-box .input-box {
+    margin-bottom: 68px;
+  }
+
+  #form-box .input-box.invalid {
+    margin-bottom: 43px;
+  }
+}
+
+@media (max-width: 991px) {
+  #purchase-section {
+    background-color: #edf255;
+  }
+
+  #purchase-section::before {
+    display: none;
+  }
+
+  #purchase-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #purchase-contact-form,
+  #purchase-order-review {
+    width: 100%;
+    height: auto;
+  }
+
+  #purchase-order-review {
+    flex-direction: row;
+  }
+
+  #order-summary li {
+    width: 100%;
+  }
+
+  #purchase-order-review h3 {
+    display: none;
+  }
+
+  #social-icons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  #purchase-contact-form {
+    padding: 25px;
+  }
+
+  #purchase-order-review {
+    padding: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #order-summary {
+    margin-right: 0;
+  }
+
+  #order-summary li {
+    min-width: 100%;
+    font-size: 1.2em;
+  }
+
+  #social-icons {
+    flex-direction: row;
+    font-size: 0.75em;
+  }
+
+  #social-icons li {
+    padding: 20px 10px 20px 0;
+  }
+
+  #social-icons li a {
+    padding: 20px 20px 20px 0;
+  }
+  #form-box .input-box.w50 {
+    width: 100%;
+  }
+
+  #form-box .input-box button {
+    min-width: 100%;
+    padding: 20px;
+  }
+}

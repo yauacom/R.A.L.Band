@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R.A.L. Band</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" />
+  <script src="https://kit.fontawesome.com/e8380b90fa.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./mobile.css">
+</head>
+
+<body>
+  <!-- Begin: Header Section-->
+  <header>
+    <img class="banner" src="./images/banner-8 (2).jpg" alt="ral-band-banner">
+    <div>
+      <div class="logo-animate">
+        <a href="#trailer-section" class="logo">
+          R.A.L. Band
+        </a>
+      </div>
+    </div>
+    <div class="toggle"></div>
+    <nav>
+      <div class="menu-btn">
+        <div class="menu-btn__burger"></div>
+      </div>
+      <ul>
+        <li><a href="#trailer-section">HOME</a></li>
+        <li><a href="./store.html">STORE</a></li>
+        <li><a onclick="closeMenu()" href="#content">STARS</a></li>
+        <li><a onclick="closeMenu()" href="#contact-section">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- End: Header Section -->
+
+  <!-- Begin: main -->
+  <div id="main">
+
+    <!-- Begin: Trailer section -->
+    <div id="trailer-section">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_lUwPb6w0pw" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <!-- End: Trailer section -->
+
+    <!-- Begin: content section -->
+    <div id="content">
+      <!-- Begin: Crew list section -->
+      <div id="member-list-section" class="yellow-section">
+        <div class="content-section">
+          <h2 class="section-heading">R.A.L. BAND</h2>
+          <p class="section-sub-heading">
+            We love music
+          </p>
+          <p class="about-paragraph">R.A.L. band, includes Ricky Star, Amee, and Lang LD, is considered as one of
+            the
+            most viral Vietnamese band on social media in the beginning of 2021. Ricky Star, Amee, and Lang LD has
+            made
+            a new hit song, "Tình bạn diệu kỳ" (Miraculous Friendship). The song had only one official lyrics video
+            but
+            has
+            earned nearly 12.5 million views and over thousand likes.
+          </p>
+
+          <!-- Test -->
+          <section class="wrapper">
+            <div class="container">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="./images/rickystar.png" alt="Ricky Star">
+                </div>
+                <div class="content">
+                  <h2 class="star-name">Ricky Star</h2>
+                  <p class="star-zodiac">Rapper</p>
+                  <p class="star-quote">Trần Tiến<br>06.26.1994<br>Can Tho, Vietnam</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="imgBx">
+                  <img src="./images/amee1.jpg" alt="Amee">
+                </div>
+                <div class="content">
+                  <h2 class="star-name">Amee</h2>
+                  <p class="star-zodiac">Singer</p>
+                  <p class="star-quote">Trần Huyền My<br>03.23.2000<br>Hanoi, Vietnam</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="imgBx">
+                  <img src="./images/landld.png" alt="Lăng LD">
+                </div>
+                <div class="content">
+                  <h2 class="star-name">Lăng LD</h2>
+                  <p class="star-zodiac">Rapper</p>
+                  <p class="star-quote">Nguyễn Tuấn Kiệt<br>11.28.1996<br>Tien Giang, Vietnam</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Test -->
+
+        </div>
+      </div>
+      <!-- Begin: Contact section -->
+      <div id="contact-section" class="black-section text-grey">
+        <div class="content-section">
+          <h2 class="section-heading">CONTACT</h2>
+          <p class="section-sub-heading">Fan? Drop a note!</p>
+
+          <div class="row contact-content">
+            <div class="col two-col s-col-full contact-info">
+              <p><i class="fas fa-map-marker-alt mt-16"></i>Ho Chi Minh City, Vietnam.</p>
+              <p><i class="fas fa-mobile-alt mt-16"></i>Phone: (123) 456-7890</p>
+              <p><i class="far fa-envelope mt-16"></i>Email: R.A.L.@somewhere.com</p>
+            </div>
+
+            <div class="col two-col s-col-full contact-form test">
+              <form id="contact-form">
+                <div class="row">
+                  <div class="col two-col s-col-full mt-16">
+                    <input id="name" type="text" class="form-control" name="name" placeholder="Name">
+                  </div>
+                  <div class="col two-col s-col-full mt-16">
+                    <input id="email" type="email" class="form-control" name="email" placeholder="Email">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col one-col s-col-full mt-16">
+                    <input id="message" type="text" class="form-control" name="message" placeholder="Message">
+                  </div>
+                </div>
+                <div class="button pull-right mt-32">
+                  <input class="btn s-full-width " onclick="toggleEmailModal()" type="submit" value="SEND📧">
+                  <div class="liquid"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End: Contact section -->
+
+    </div>
+    <!-- End: Content section -->
+
+  </div>
+  <!-- End: Main section -->
+
+  <!-- Start: Message Pop-up -->
+
+  <div id="pop-up">
+    <h2 class="section-heading">Thank you for getting in touch!</h2>
+    <p class="pop-up-message mt-32">We appreciate you sending us a message.</p>
+    <p class="pop-up-message"> Check out <a href="store.html">R.A.L. store</a> to support our Stars.
+    </p>
+    <p class="pop-up-message"> Have a great day ahead!
+    </p>
+    <div class="button mt-32">
+      <a href="#contact-section" onclick="toggleEmailModal()">Close</a>
+      <div class="liquid"></div>
+    </div>
+  </div>
+
+  <!-- End: Message Pop-up -->
+
+  <!-- Begin: footer section -->
+  <footer id="footer">
+    <div class="social-list">
+      <div class="copyright">
+        <p class="author"><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Powered by
+          <a href="https://github.com/yauacom" target="_blank">Sang.V</a>
+        </p>
+      </div>
+      <ul>
+        <li><a href="#https://www.facebook.com/sang.vo.589/"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/sang-vo-9194241b2/"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://www.youtube.com/user/Yauacom"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+    </div>
+    </div>
+  </footer>
+  <!-- End: Footer Section -->
+
+  <!-- <script src="validationForm.js"></script> -->
+  <script src="./main.js"></script>
+</body>
+
+</html>
